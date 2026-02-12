@@ -11,22 +11,35 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const allowedOrigins = new Set([
-  "http://localhost:3000",
-  "http://127.0.0.1:3000",
-  "http://localhost:3001",
-  ...(process.env.FRONTEND_URL || "")
-    .split(",")
-    .map((s) => s.trim())
+function normalizeOrigin(value) {
+  return (value || "").trim().replace(/\/+$/, "");
+}
+
+const allowedOrigins = new Set(
+  [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:3001",
+    ...(process.env.FRONTEND_URL || "").split(",")
+  ]
+    .map(normalizeOrigin)
     .filter(Boolean)
-]);
+);
+
+function isAllowedOrigin(origin) {
+  const normalized = normalizeOrigin(origin);
+  if (allowedOrigins.has(normalized)) return true;
+  // Allow Vercel preview/production subdomains without per-deploy env churn.
+  return /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(normalized);
+}
 
 app.use(cors({
   origin: (origin, callback) => {
     // Allow non-browser and same-origin requests (no Origin header).
     if (!origin) return callback(null, true);
-    if (allowedOrigins.has(origin)) return callback(null, true);
-    return callback(new Error(`CORS blocked for origin: ${origin}`));
+    if (isAllowedOrigin(origin)) return callback(null, true);
+    // Block cross-origin without crashing request handling.
+    return callback(null, false);
   },
   credentials: true
 }));

@@ -10,6 +10,13 @@ const primaryButton =
 const inputClass =
   "w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-white placeholder-gray-500 outline-none transition-all duration-300 focus:border-violet-500";
 
+function getBackendBaseUrl() {
+  const configured = process.env.NEXT_PUBLIC_BACKEND_URL?.trim();
+  if (configured) return configured;
+  if (process.env.NODE_ENV !== "production") return "http://localhost:3001";
+  throw new Error("NEXT_PUBLIC_BACKEND_URL is not configured.");
+}
+
 export default function AdminPanel() {
   const router = useRouter();
   const [markets, setMarkets] = useState([]);
@@ -76,7 +83,7 @@ export default function AdminPanel() {
     try {
       setResolving(marketId);
       setErr("");
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+      const backendUrl = getBackendBaseUrl();
       const res = await fetch(`${backendUrl}/resolve`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -106,7 +113,7 @@ export default function AdminPanel() {
         setErr("Invalid expiry date/time.");
         return;
       }
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+      const backendUrl = getBackendBaseUrl();
       const res = await fetch(`${backendUrl}/create-market`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

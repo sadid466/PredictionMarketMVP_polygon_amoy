@@ -66,12 +66,6 @@ export default function AdminPanel() {
   }, []);
 
   useEffect(() => {
-    if (!authenticated) {
-      router.replace('/');
-    }
-  }, [authenticated, router]);
-
-  useEffect(() => {
     if (!authenticated) return;
     fetchMarkets()
       .then(setMarkets)

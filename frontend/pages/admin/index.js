@@ -11,7 +11,7 @@ const inputClass =
   "w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-white placeholder-gray-500 outline-none transition-all duration-300 focus:border-violet-500";
 
 function getBackendBaseUrl() {
-  const configured = process.env.NEXT_PUBLIC_BACKEND_URL?.trim();
+  const configured = process.env.NEXT_PUBLIC_BACKEND_URL?.trim().replace(/\/+$/, "");
   if (configured) return configured;
   if (process.env.NODE_ENV !== "production") return "http://localhost:3001";
   throw new Error("NEXT_PUBLIC_BACKEND_URL is not configured.");

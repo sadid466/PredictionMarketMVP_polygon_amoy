@@ -1,0 +1,58 @@
+{
+  "1": {
+    "id": 1,
+    "slug": "csgo-major-faze-2026",
+    "name": "CS:GO Major Winner – FaZe Clan (2026)",
+    "question": "Will FaZe Clan win the next Counter-Strike Major event that takes place in calendar year 2026?",
+    "expiry_hint": "Set to the scheduled end date/time of the first CS2/CS:GO Major that occurs in 2026 (UTC).",
+    "oracle_source": "HLTV.org event page + official organizer results",
+    "initial_yes_prob": 0.35,
+    "liquidity_usdc": 1000,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 20,
+    "contract": "0x74AFc66F759d65D896e960B3Dc92e33FC0D998A5",
+    "expiry": 1798761599
+  },
+  "2": {
+    "id": 2,
+    "slug": "minecraft-any-percent-wr-2026",
+    "name": "Minecraft Any% WR Broken (2026)",
+    "question": "Will the Minecraft: Java Edition Any% Glitchless world record (as listed on Speedrun.com) be broken at least once between now and 2026-12-31 23:59:59 UTC?",
+    "expiry_hint": "2026-12-31 23:59:59 UTC",
+    "oracle_source": "Speedrun.com leaderboard for Minecraft: Java Edition Any% Glitchless",
+    "initial_yes_prob": 0.2,
+    "liquidity_usdc": 500,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 10,
+    "contract": "0xFc794a78Ddd7E98F182A9133a6A80ddF5f2Df4Dc",
+    "expiry": 1798761599
+  },
+  "3": {
+    "id": 3,
+    "slug": "fortnite-world-cup-nrg-2026",
+    "name": "Fortnite World Cup Winner – NRG (2026)",
+    "question": "Will a Fortnite World Cup event in calendar year 2026 be won by a player signed to NRG Esports at the time of the event?",
+    "expiry_hint": "Set to the end date/time of the first Fortnite World Cup event in 2026 (UTC) OR Dec 31 2026 if unknown.",
+    "oracle_source": "Epic Games official tournament results + NRG roster announcement",
+    "initial_yes_prob": 0.3,
+    "liquidity_usdc": 800,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 15,
+    "contract": "0x19Fd4195f2888F707a595CcB9bfA91797b4bC667",
+    "expiry": 1798761599
+  },
+  "4": {
+    "id": 4,
+    "slug": "lcs-champ-c9-2026",
+    "name": "League of Legends LCS Split Winner – Cloud9 (2026)",
+    "question": "Will Cloud9 win the next LCS split that concludes in calendar year 2026?",
+    "expiry_hint": "Set to the end date/time of the next LCS split in 2026 (UTC).",
+    "oracle_source": "Riot Games official standings/results",
+    "initial_yes_prob": 0.4,
+    "liquidity_usdc": 900,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 20,
+    "contract": "0xE927eF9B9aF18D8e37482835E3865b18BC8257Ba",
+    "expiry": 1798761599
+  }
+}

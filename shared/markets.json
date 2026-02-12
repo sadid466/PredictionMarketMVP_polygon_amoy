@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "slug": "csgo-major-faze-2026",
+    "name": "CS:GO Major Winner \u2013 FaZe Clan (2026)",
+    "question": "Will FaZe Clan win the next Counter-Strike Major event that takes place in calendar year 2026?",
+    "expiry_hint": "Set to the scheduled end date/time of the first CS2/CS:GO Major that occurs in 2026 (UTC).",
+    "oracle_source": "HLTV.org event page + official organizer results",
+    "initial_yes_prob": 0.35,
+    "liquidity_usdc": 1000,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 20
+  },
+  {
+    "id": 2,
+    "slug": "minecraft-any-percent-wr-2026",
+    "name": "Minecraft Any% WR Broken (2026)",
+    "question": "Will the Minecraft: Java Edition Any% Glitchless world record (as listed on Speedrun.com) be broken at least once between now and 2026-12-31 23:59:59 UTC?",
+    "expiry_hint": "2026-12-31 23:59:59 UTC",
+    "oracle_source": "Speedrun.com leaderboard for Minecraft: Java Edition Any% Glitchless",
+    "initial_yes_prob": 0.2,
+    "liquidity_usdc": 500,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 10
+  },
+  {
+    "id": 3,
+    "slug": "fortnite-world-cup-nrg-2026",
+    "name": "Fortnite World Cup Winner \u2013 NRG (2026)",
+    "question": "Will a Fortnite World Cup event in calendar year 2026 be won by a player signed to NRG Esports at the time of the event?",
+    "expiry_hint": "Set to the end date/time of the first Fortnite World Cup event in 2026 (UTC) OR Dec 31 2026 if unknown.",
+    "oracle_source": "Epic Games official tournament results + NRG roster announcement",
+    "initial_yes_prob": 0.3,
+    "liquidity_usdc": 800,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 15
+  },
+  {
+    "id": 4,
+    "slug": "lcs-champ-c9-2026",
+    "name": "League of Legends LCS Split Winner \u2013 Cloud9 (2026)",
+    "question": "Will Cloud9 win the next LCS split that concludes in calendar year 2026?",
+    "expiry_hint": "Set to the end date/time of the next LCS split in 2026 (UTC).",
+    "oracle_source": "Riot Games official standings/results",
+    "initial_yes_prob": 0.4,
+    "liquidity_usdc": 900,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 20
+  },
+  {
+    "id": 5,
+    "slug": "csgo-major-mvp-s1mple-2026",
+    "name": "CS:GO Major MVP \u2013 s1mple (2026)",
+    "question": "Will Oleksandr 's1mple' Kostyliev be named MVP of the next Counter-Strike Major event that takes place in calendar year 2026?",
+    "expiry_hint": "Set to the scheduled end date/time of the first Major in 2026 (UTC).",
+    "oracle_source": "HLTV.org MVP award + event stats",
+    "initial_yes_prob": 0.5,
+    "liquidity_usdc": 600,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 10
+  },
+  {
+    "id": 6,
+    "slug": "xqc-1m-concurrent-2026",
+    "name": "xQc hits 1M concurrent viewers (2026)",
+    "question": "Will xQc reach at least 1,000,000 concurrent viewers on a single live stream during calendar year 2026?",
+    "expiry_hint": "2026-12-31 23:59:59 UTC",
+    "oracle_source": "Third-party analytics (e.g., SullyGnome/StreamsCharts) + VOD/clip evidence",
+    "initial_yes_prob": 0.45,
+    "liquidity_usdc": 700,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 15
+  },
+  {
+    "id": 7,
+    "slug": "atomic-heart-1m-steam-2026",
+    "name": "Atomic Heart hits 1M active Steam players in 30 days",
+    "question": "Will Atomic Heart reach at least 1,000,000 active players on Steam within 30 days after its (re)release date used for this market?",
+    "expiry_hint": "Set to release_date + 30 days (UTC). Update release_date before deploying.",
+    "oracle_source": "SteamCharts/SteamDB (note: may require agreed definition of 'active')",
+    "initial_yes_prob": 0.55,
+    "liquidity_usdc": 1000,
+    "min_trade_usdc": 1,
+    "max_trade_usdc": 20
+  }
+]

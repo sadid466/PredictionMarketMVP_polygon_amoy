@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --text-secondary: #64748b;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(203, 213, 225, 0.95);
+  --glass-overlay-violet: rgba(139, 92, 246, 0.14);
+  --glass-overlay-cyan: rgba(34, 211, 238, 0.14);
+  --chart-title: #0f172a;
+  --chart-muted: #64748b;
+  --chart-grid: rgba(100, 116, 139, 0.22);
+  --chart-axis: #94a3b8;
+  --chart-tooltip-bg: rgba(255, 255, 255, 0.96);
+  --chart-tooltip-border: rgba(203, 213, 225, 0.95);
+  --chart-tooltip-text: #0f172a;
+  --stat-bg: rgba(255, 255, 255, 0.86);
+  --stat-border: rgba(203, 213, 225, 0.95);
+  --stat-title: #64748b;
+  --stat-value: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Space Grotesk",
+    "Sora",
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --text-secondary: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-overlay-violet: rgba(139, 92, 246, 0.2);
+  --glass-overlay-cyan: rgba(34, 211, 238, 0.18);
+  --chart-title: #e2e8f0;
+  --chart-muted: #94a3b8;
+  --chart-grid: rgba(255, 255, 255, 0.08);
+  --chart-axis: #cbd5e1;
+  --chart-tooltip-bg: rgba(2, 6, 23, 0.92);
+  --chart-tooltip-border: rgba(255, 255, 255, 0.12);
+  --chart-tooltip-text: #e2e8f0;
+  --stat-bg: rgba(2, 6, 23, 0.45);
+  --stat-border: rgba(255, 255, 255, 0.12);
+  --stat-title: #94a3b8;
+  --stat-value: #f8fafc;
+}
+
+.dark body {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.22);
+  color: #0f172a;
+}
+
+.dark ::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.75);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.5), rgba(14, 165, 233, 0.45));
+  border: 2px solid rgba(248, 250, 252, 0.95);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.85), rgba(34, 211, 238, 0.75));
+  border: 2px solid rgba(2, 6, 23, 0.9);
+}

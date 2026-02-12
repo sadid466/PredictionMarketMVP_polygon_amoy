@@ -1,0 +1,9 @@
+# In your .gitignore file
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+.env
+.env.local
+dist/
+build/

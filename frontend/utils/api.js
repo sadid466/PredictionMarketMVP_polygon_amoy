@@ -3,7 +3,7 @@ function getBackendBaseUrl() {
   if (configured) return configured;
 
   if (process.env.NODE_ENV !== "production") return "http://localhost:3001";
-  throw new Error("NEXT_PUBLIC_BACKEND_URL is not configured.");
+  return "https://predictionmarketmvp-polygon-amoy.onrender.com";
 }
 
 export async function fetchMarkets() {

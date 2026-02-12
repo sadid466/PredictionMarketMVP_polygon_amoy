@@ -1,5 +1,6 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --text-secondary: #64748b;
@@ -32,14 +33,7 @@ body,
 
 body {
   margin: 0;
-  font-family:
-    "Space Grotesk",
-    "Sora",
-    "Inter",
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: "Space Grotesk", "Sora", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   background: #f8fafc;
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
